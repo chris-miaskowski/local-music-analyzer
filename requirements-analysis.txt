@@ -1,0 +1,29 @@
+# Local Music Analyzer: file-analysis dependencies
+# Install via: bash scripts/install-analysis-deps.sh
+#
+# Matched audio runtime, including the codec used by torchaudio.load.
+torch==2.10.0
+torchaudio==2.10.0
+torchcodec==0.10.0
+
+# Core
+demucs>=4.0.1
+openai-whisper>=20250625
+beat-this>=0.1
+
+# Essentia — try essentia-tensorflow first (bundles TF in C++, has macOS ARM wheel)
+# Fallback: pip install essentia (DSP only, no ML classifiers via TF API)
+essentia-tensorflow>=2.1b6.dev1389
+
+# Spectral analysis
+librosa>=0.10.2
+
+# ML inference fallback (ONNX models when essentia-tensorflow unavailable)
+onnxruntime>=1.21.1
+
+# Pitch tracking (PyTorch-based CREPE, uses existing torch)
+torchcrepe>=0.0.22
+
+# Structure and mastering stages
+allin1>=1.1.0
+pyloudnorm>=0.2.0

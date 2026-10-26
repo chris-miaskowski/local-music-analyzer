@@ -1,0 +1,5 @@
+catap==0.6.0; sys_platform == "darwin"
+numpy==2.5.3
+fastapi==0.141.1
+uvicorn==0.53.0
+websockets==16.1
